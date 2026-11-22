@@ -1,7 +1,7 @@
 name: Home Assistant
 on:
   push:
-    paths: ['custom_components/**', 'tests_ha/**', 'scripts/test_homeassistant.py', 'requirements-ha-test.txt', 'hacs.json', '.github/workflows/validate.yaml']
+    paths: ['custom_components/**', 'tests_ha/**', 'scripts/test_homeassistant.py', 'requirements-ha-test.txt', 'pyproject.toml', 'hacs.json', '.github/workflows/validate.yaml']
   pull_request:
   workflow_dispatch:
 permissions:
