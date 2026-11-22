@@ -1,0 +1,80 @@
+{
+  "title": "Sonos Mode Switch",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sonos Mode Switch",
+        "description": "Connect your local Sonos Mode Switch service.",
+        "data": {
+          "url": "Service URL",
+          "token": "API token"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthentication",
+        "data": {
+          "token": "API token"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid API token.",
+      "cannot_connect": "Cannot connect or incompatible service.",
+      "invalid_url": "Use an HTTP(S) origin without a path or credentials."
+    },
+    "abort": {
+      "already_configured": "Service already configured.",
+      "reauth_successful": "Reauthentication successful."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "poll_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "select": {
+      "mode": {
+        "name": "Mode",
+        "state": {
+          "music": "Music",
+          "cinema": "Cinema"
+        }
+      }
+    },
+    "binary_sensor": {
+      "transition": {
+        "name": "Transition in progress"
+      }
+    },
+    "sensor": {
+      "observed_mode": {
+        "name": "Observed mode",
+        "state": {
+          "music": "Music",
+          "cinema": "Cinema",
+          "standalone": "Standalone",
+          "inconsistent": "Reconfiguration",
+          "unknown": "Unknown"
+        }
+      },
+      "operation": {
+        "name": "Last operation",
+        "state": {
+          "idle": "Idle",
+          "accepted": "Accepted",
+          "running": "Running",
+          "succeeded": "Succeeded",
+          "failed": "Failed",
+          "stopped": "Stopped",
+          "interrupted": "Interrupted",
+          "needs_attention": "Needs attention"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "title": "Sonos Mode Switch",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sonos Mode Switch",
+        "description": "Connectez le service local Sonos Mode Switch.",
+        "data": {
+          "url": "URL du service",
+          "token": "Jeton API"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Authentification",
+        "data": {
+          "token": "Jeton API"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Jeton refusé.",
+      "cannot_connect": "Service inaccessible ou incompatible.",
+      "invalid_url": "Utilisez une URL HTTP(S) sans chemin ni identifiants."
+    },
+    "abort": {
+      "already_configured": "Service déjà configuré.",
+      "reauth_successful": "Authentification réussie."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "poll_interval": "Intervalle de mise à jour (secondes)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "select": {
+      "mode": {
+        "name": "Mode",
+        "state": {
+          "music": "Musique",
+          "cinema": "Cinéma"
+        }
+      }
+    },
+    "binary_sensor": {
+      "transition": {
+        "name": "Transition en cours"
+      }
+    },
+    "sensor": {
+      "observed_mode": {
+        "name": "Mode observé",
+        "state": {
+          "music": "Musique",
+          "cinema": "Cinéma",
+          "standalone": "Indépendantes",
+          "inconsistent": "Reconfiguration",
+          "unknown": "Inconnu"
+        }
+      },
+      "operation": {
+        "name": "Dernière opération",
+        "state": {
+          "idle": "Aucune",
+          "accepted": "Acceptée",
+          "running": "En cours",
+          "succeeded": "Terminée",
+          "failed": "Échec",
+          "stopped": "Arrêtée",
+          "interrupted": "Interrompue",
+          "needs_attention": "À vérifier"
+        }
+      }
+    }
+  }
+}

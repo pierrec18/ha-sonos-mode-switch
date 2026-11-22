@@ -1,0 +1,14 @@
+{
+  "domain": "sonos_mode_switch",
+  "name": "Sonos Mode Switch",
+  "codeowners": [
+    "@pierrec18"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/pierrec18/ha-sonos-mode-switch",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/pierrec18/ha-sonos-mode-switch/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}
