@@ -8,8 +8,8 @@ Elle ne contacte pas directement les enceintes et ne nécessite ni SSH, ni
 
 Dans HACS / Marketplace, ajouter `pierrec18/ha-sonos-mode-switch` comme dépôt
 personnalisé de catégorie **Intégration**, télécharger la version `v0.1.0`,
-puis redémarrer Home Assistant. Le dépôt reste privé : le compte GitHub de
-HACS / Marketplace doit pouvoir le lire.
+puis redémarrer Home Assistant. Le dépôt de cette intégration est public ;
+le service Sonos et sa configuration restent privés.
 
 Dans **Paramètres → Appareils et services → Ajouter une intégration**, choisir
 **Sonos Mode Switch**, puis saisir l'origine HTTP(S) du service (exemple :

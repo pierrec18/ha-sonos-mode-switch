@@ -14,11 +14,9 @@
 
 ## Deployment gates
 
-The repository is initially private. HACS's action explicitly refuses private
-repositories, and the GitHub account connected to the target Marketplace cannot
-read private repositories. Publication of this integration alone requires the
-owner's approval; the service repository stays private.
+The owner authorized publication of this integration-only repository on 2026-11-22.
+The Sonos service repository remains private. No production credentials are included.
 
-Installed-file discovery, production token authentication, live entity availability
-and rendered UI are not yet verified. No live topology transition has been triggered
-by this integration during development.
+The 0.1.0 files were installed manually and discovered by Core after restart.
+Production authentication and live entities remain blocked by API network reachability.
+Rendered UI and live topology transitions have not been verified.
