@@ -2,10 +2,11 @@ from unittest.mock import patch
 
 import pytest
 from conftest import MockConfigEntry
-from custom_components.sonos_mode_switch.api import ApiError, InvalidAuth, normalize_url
-from custom_components.sonos_mode_switch.const import DOMAIN
 from homeassistant.config_entries import SOURCE_REAUTH, SOURCE_USER
 from homeassistant.exceptions import HomeAssistantError
+
+from custom_components.sonos_mode_switch.api import ApiError, InvalidAuth, normalize_url
+from custom_components.sonos_mode_switch.const import DOMAIN
 
 DATA = {"url": "http://sonos.test:8765", "token": "test-only-not-production"}
 
@@ -174,8 +175,9 @@ def test_reject_unsafe_url(url):
     ],
 )
 async def test_http_errors_no_retry(hass, aioclient_mock, code, error):
-    from custom_components.sonos_mode_switch.api import SonosApi
     from homeassistant.helpers.aiohttp_client import async_get_clientsession
+
+    from custom_components.sonos_mode_switch.api import SonosApi
 
     api = SonosApi(async_get_clientsession(hass), DATA["url"], DATA["token"])
     aioclient_mock.get(DATA["url"] + "/test", status=code)
